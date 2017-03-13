@@ -1,1 +1,2 @@
 crawler.py是抓取的豆瓣小说按评价排行的小说列表
+lagoucrawler.py是抓取的拉钩网全国python分类
