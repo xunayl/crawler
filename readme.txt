@@ -1,5 +1,6 @@
 crawler.py是抓取的豆瓣小说按评价排行的小说列表
 lagoucrawler.py是抓取的拉钩网全国python分类
 baiduiconcrawler.py是抓取的百度首页log
-instagramcrawler.py用来抓取instagram 尚未完成
+instagramcrawler.py用来抓取instagram 完成到可以登录
 zhihu.py用来登录知乎并在自己首页上抓取问题和答主信息,使用selenium抓取动态网页  #登录是在没有验证码的情况下登录的，还不会处理有验证码的情况
+
