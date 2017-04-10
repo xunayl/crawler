@@ -4,4 +4,4 @@ baiduiconcrawler.py是抓取的百度首页log
 instagramcrawler.py用来抓取instagram 完成到可以登录
 zhihu.py用来登录知乎并在自己首页上抓取问题和答主信息,使用selenium抓取动态网页  #登录是在没有验证码的情况下登录的，还不会处理有验证码的情况
 高德API+python租房正在学习中
-
+高德API+python租房中crawler为抓单页,test为抓一种价位的所有,rent.csv是单页结果,renttest.csv为一种价位的所有结果
