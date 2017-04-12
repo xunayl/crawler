@@ -55,8 +55,8 @@ while url:
     else:
         url = None
 
-with codecs.open('renttest.csv', 'w') as f:
+with codecs.open('renttest%s.csv'%numb, 'w') as f:
     csv_writer = csv.writer(f, delimiter=',')
-    for a, b, c, d in zip(house_title, house_money, house_location, house_link):
+    for a, b, c, d in zip(house_title, house_location, house_money, house_link):
         csv_writer.writerow([a, b, c, d])
 

@@ -39,9 +39,9 @@ def choose_price():
 def return_data(url):
     r=requests.get(url).text
     soup=BeautifulSoup(r,'lxml')
+    house_list=soup.find('ul',{'class':'list'}).find_all('li')
     t=re.compile(r'<h2>(.*)</h2>')
     house_title=re.findall(t,r)
-    house_list=soup.find('ul',{'class':'list'}).find_all('li')
     house_link=[]
     house_money=[]
     house_location=[]
@@ -50,15 +50,22 @@ def return_data(url):
         house_money.append(i.select('.money')[0].select('b')[0].text+'元/月')
     for i in house_title:
         house_location.append(i.split()[1])
-    print(house_link)
-    print(house_title)
-    print(house_money)
-    print(house_location)
+    #print(house_link)
+    #print(house_title)
+    #print(house_money)
+    #print(house_location)
 
     with codecs.open('rent.csv','w') as f:
         csv_writer=csv.writer(f,delimiter=',')
         for a,b,c,d in zip(house_title,house_money,house_location,house_link):
             csv_writer.writerow([a,b,c,d])
 
+    newurl=urlhead+soup.find('a',{'class':'next'})['href']
+    return house_title,house_money,house_location,house_link,newurl
+
     #print(soup.select('.des')[0].select('h2')[0].text)
-return_data(choose_price())
+
+#return_data(choose_price())
+def main():
+    url=choose_price()
+    house_title, house_money, house_location, house_link, newurl=return_data(url)
