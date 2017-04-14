@@ -5,3 +5,4 @@ instagramcrawler.py用来抓取instagram 完成到可以登录
 zhihu.py用来登录知乎并在自己首页上抓取问题和答主信息,使用selenium抓取动态网页  #登录是在没有验证码的情况下登录的，还不会处理有验证码的情况
 高德API+python租房正在学习中
 10lines.py是从网上看的鉴别一张图片是否yellow
+test_send_mail 用来自动发送邮件,后期准备完善成可以自动推送新鲜事(其中user为自己放账号密码的文件,第一行账号,第二行密码)
